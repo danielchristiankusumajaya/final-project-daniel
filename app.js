@@ -151,6 +151,6 @@ app.delete('/admin/delete-game/:id', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
   if (require.main === module) {
-    app._router(PORT), () => console.log(`Server running on port ${PORT}`);
+    app.listen(PORT), () => console.log(`Server running on port ${PORT}`);
   }
 module.exports = app;
