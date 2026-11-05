@@ -1,0 +1,128 @@
+<%- include('partials/header', { title: team.name }) %>
+
+
+<section class="section-pad-sm">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-md-4 text-center">
+        <img src="<%= team.logo %>" class="team-logo-lg" alt="<%= team.name %>" />
+      </div>
+      <div class="col-12 col-md-8">
+        <h1 class="team-title"><%= team.name %></h1>
+        <p class="team-description"><%= team.description %></p>
+        <div class="row g-3 mt-2">
+          <div class="col-12 col-md-6">
+            <div class="info-box">
+              <p class="info-label"><i class="fa-solid fa-location-dot me-2"></i>Home Base</p>
+              <p class="info-value mb-0"><%= team.homebase %></p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="info-box">
+              <p class="info-label"><i class="fa-solid fa-share-nodes me-2"></i>Social Media</p>
+              <div class="social-inline">
+                <a href="#" class="social-link-sm"><i class="fa-brands fa-instagram"></i> <%= team.ig %></a>
+                <a href="#" class="social-link-sm"><i class="fa-solid fa-globe"></i> <%= team.web %></a>
+                <a href="mailto:<%= team.email %>" class="social-link-sm"><i class="fa-solid fa-reply"></i> <%= team.email %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <div class="info-box h-100">
+          <p class="info-label"><i class="fa-regular fa-calendar me-2"></i>Latest Match</p>
+         
+          <% if (latestMatch) { %>
+            <p class="info-value mb-1">
+              <%= latestMatch.teamA.name %> <strong><%= latestMatch.scoreA %> - <%= latestMatch.scoreB %></strong> <%= latestMatch.teamB.name %>
+            </p>
+            <p class="info-sub mb-0"><%= latestMatch.date %> — <%= latestMatch.location %></p>
+          <% } else { %>
+            <p class="info-value mb-1">No matches played yet</p>
+            <p class="info-sub mb-0">-</p>
+          <% } %>
+
+
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="info-box h-100">
+          <p class="info-label"><i class="fa-solid fa-trophy me-2"></i>Total Points</p>
+          <p class="info-value mb-1"><strong><%= team.totalPoints %> points</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pb-4">
+  <div class="container">
+    <h3 class="heading-underline mb-4">Management</h3>
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="list-card">
+          <p class="list-label">Name</p>
+          <p class="list-value"><%= team.headCoach %></p>
+          <p class="list-label">Position</p>
+          <p class="list-value">Head Coach</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="list-card">
+          <p class="list-label">Name</p>
+          <p class="list-value"><%= team.assistantCoach %></p>
+          <p class="list-label">Position</p>
+          <p class="list-value">Assistant Coach</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="list-card">
+          <p class="list-label">Name</p>
+          <p class="list-value"><%= team.manager %></p>
+          <p class="list-label">Position</p>
+          <p class="list-value">Team Manager</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pb-5">
+  <div class="container">
+    <h3 class="heading-underline mb-4">Players</h3>
+    <div class="row g-4">
+      <% players.forEach(function(player) { %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="player-card">
+            <img src="<%= player.photo || 'https://ui-avatars.com/api/?name=' + player.name %>" class="player-img" alt="<%= player.name %>" />
+            <div class="player-body">
+              <h5 class="player-name"><%= player.name %></h5>
+              <ul class="player-info">
+                <li><strong>Height:</strong> <%= player.height %></li>
+                <li><strong>Weight:</strong> <%= player.weight %></li>
+                <li><strong>Position:</strong> <%= player.position %></li>
+                <li><strong>Nationality:</strong> <%= player.nationality %></li>
+                <li><strong>IG:</strong> <a href="#" class="player-link"><%= player.ig %></a></li>
+                <li><strong>Points:</strong> <%= player.points %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+
+<%- include('partials/footer') %>

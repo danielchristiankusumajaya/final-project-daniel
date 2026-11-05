@@ -1,0 +1,40 @@
+<%- include('partials/header', { title: 'Games' }) %>
+
+<section class="section-pad-sm">
+  <div class="container text-center">
+    <h1 class="heading-underline">Games Schedule</h1>
+    <p class="section-subheading">5 Latest Matches</p>
+  </div>
+</section>
+
+<section class="pb-5">
+  <div class="container">
+    <% games.forEach(function(game) { %>
+      <div class="game-card">
+        <p class="game-date">
+          <i class="fa-regular fa-calendar me-2"></i><%= game.date %>
+        </p>
+        <div class="game-teams">
+          <div class="game-team">
+            <img src="<%= game.teamA.logo %>" class="game-logo" alt="<%= game.teamA.name %>" />
+            <p class="game-team-name"><%= game.teamA.name %></p>
+          </div>
+          <div class="game-score">
+            <p class="game-score-text"><%= game.scoreA %> - <%= game.scoreB %></p>
+            <p class="game-score-label">Final</p>
+          </div>
+          <div class="game-team">
+            <img src="<%= game.teamB.logo %>" class="game-logo" alt="<%= game.teamB.name %>" />
+            <p class="game-team-name"><%= game.teamB.name %></p>
+          </div>
+        </div>
+        <p class="game-location">
+          <i class="fa-solid fa-location-dot me-2"></i><%= game.location %>
+        </p>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+
+<%- include('partials/footer') %>

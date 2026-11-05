@@ -1,0 +1,157 @@
+<%- include('partials/header', { title: 'Leaderboard' }) %>
+
+
+<section class="section-pad-sm">
+  <div class="container text-center">
+    <h1 class="heading-underline">Leaderboard</h1>
+    <p class="section-subheading">Standings and top statistics of the season</p>
+  </div>
+</section>
+
+
+<section class="pb-4">
+  <div class="container">
+    <h3 class="table-title"><i class="fa-solid fa-chart-simple me-2"></i>Standings</h3>
+    <div class="table-responsive table-wrap">
+      <table class="table table-sbl align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th class="text-center">Games Played</th>
+            <th class="text-center">Total Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% standings.forEach(function(team, index) { %>
+            <tr>
+              <td><span class="rank-badge"><%= index + 1 %></span></td>
+              <td><%= team.name %></td>
+              <td class="text-center"><%= team.gamesPlayed %></td>
+              <td class="text-center"><strong><%= team.totalPoints %></strong></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<section class="pb-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <h3 class="table-title"><i class="fa-solid fa-star me-2"></i>Top 3 Points</h3>
+        <div class="table-responsive table-wrap">
+          <table class="table table-sbl align-middle mb-0">
+            <thead>
+              <tr><th>#</th><th>Player</th><th>Team</th><th class="text-center">Total Points</th></tr>
+            </thead>
+            <tbody>
+              <% topPoints.forEach(function(p, index) { %>
+                <tr>
+                  <td><span class="rank-badge"><%= index + 1 %></span></td>
+                  <td><%= p.name %></td>
+                  <td><%= p.teamId ? p.teamId.name : 'No Team' %></td>
+                  <td class="text-center"><strong><%= p.points %></strong></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+        <h3 class="table-title"><i class="fa-solid fa-circle-up me-2"></i>Top 3 Rebounds</h3>
+        <div class="table-responsive table-wrap">
+          <table class="table table-sbl align-middle mb-0">
+            <thead>
+              <tr><th>#</th><th>Player</th><th>Team</th><th class="text-center">Total Rebounds</th></tr>
+            </thead>
+            <tbody>
+              <% topRebounds.forEach(function(p, index) { %>
+                <tr>
+                  <td><span class="rank-badge"><%= index + 1 %></span></td>
+                  <td><%= p.name %></td>
+                  <td><%= p.teamId ? p.teamId.name : 'No Team' %></td>
+                  <td class="text-center"><strong><%= p.rebounds %></strong></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+        <h3 class="table-title"><i class="fa-solid fa-user-ninja me-2"></i>Top 3 Assists</h3>
+        <div class="table-responsive table-wrap">
+          <table class="table table-sbl align-middle mb-0">
+            <thead>
+              <tr><th>#</th><th>Player</th><th>Team</th><th class="text-center">Total Assists</th></tr>
+            </thead>
+            <tbody>
+              <% topAssists.forEach(function(p, index) { %>
+                <tr>
+                  <td><span class="rank-badge"><%= index + 1 %></span></td>
+                  <td><%= p.name %></td>
+                  <td><%= p.teamId ? p.teamId.name : 'No Team' %></td>
+                  <td class="text-center"><strong><%= p.assists %></strong></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+        <h3 class="table-title"><i class="fa-solid fa-shield-halved me-2"></i>Top 3 Blocks</h3>
+        <div class="table-responsive table-wrap">
+          <table class="table table-sbl align-middle mb-0">
+            <thead>
+              <tr><th>#</th><th>Player</th><th>Team</th><th class="text-center">Total Blocks</th></tr>
+            </thead>
+            <tbody>
+              <% topBlocks.forEach(function(p, index) { %>
+                <tr>
+                  <td><span class="rank-badge"><%= index + 1 %></span></td>
+                  <td><%= p.name %></td>
+                  <td><%= p.teamId ? p.teamId.name : 'No Team' %></td>
+                  <td class="text-center"><strong><%= p.blocks %></strong></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+        <h3 class="table-title"><i class="fa-solid fa-share-nodes me-2"></i>Top 3 Steals</h3>
+        <div class="table-responsive table-wrap">
+          <table class="table table-sbl align-middle mb-0">
+            <thead>
+              <tr><th>#</th><th>Player</th><th>Team</th><th class="text-center">Total Steals</th></tr>
+            </thead>
+            <tbody>
+              <% topSteals.forEach(function(p, index) { %>
+                <tr>
+                  <td><span class="rank-badge"><%= index + 1 %></span></td>
+                  <td><%= p.name %></td>
+                  <td><%= p.teamId ? p.teamId.name : 'No Team' %></td>
+                  <td class="text-center"><strong><%= p.steals %></strong></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,64 @@
+<%- include('partials/header', { title: 'Tickets' }) %>
+
+
+<section class="section-pad-sm">
+  <div class="container text-center">
+    <h1 class="heading-underline">Tickets</h1>
+    <p class="section-subheading">Get your tickets and experience the excitement of Surabaya Basketball League live! Choose your ticket and cheer for your favorite team.</p>
+  </div>
+</section>
+
+
+<section class="pb-5">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="ticket-card">
+          <div class="ticket-header">
+            <p class="ticket-type">Regular Ticket</p>
+            <p class="ticket-price">Rp 50.000</p>
+            <p class="ticket-per">per person</p>
+          </div>
+          <div class="ticket-body">
+            <ul class="ticket-list">
+              <li><i class="fa-solid fa-circle-check me-2"></i>Valid on the match date</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i>Available to the general public</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i>Match: Surabaya Titans vs Surabaya Warriors</li>
+              <li><i class="fa-regular fa-calendar me-2"></i>Monday, October 19, 2026</li>
+              <li><i class="fa-solid fa-location-dot me-2"></i>DBL Arena, Surabaya</li>
+            </ul>
+            <button type="button" class="btn btn-sbl w-100 mt-3">
+              <i class="fa-solid fa-ticket me-2"></i>Buy Ticket
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="ticket-card ticket-card-vip">
+          <div class="ticket-header-vip">
+            <p class="ticket-type">VIP Ticket<i class="fa-solid fa-star ms-1"></i></p>
+            <p class="ticket-price">Rp 100.000</p>
+            <p class="ticket-per">per person</p>
+          </div>
+          <div class="ticket-body">
+            <ul class="ticket-list">
+              <li><i class="fa-solid fa-circle-check me-2"></i>Valid on the match date</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i>VIP ticket available to the general public</li>
+              <li><i class="fa-solid fa-circle-check me-2"></i>Match: Surabaya Titans vs Surabaya Warriors</li>
+              <li><i class="fa-regular fa-calendar me-2"></i>Monday, October 19, 2026</li>
+              <li><i class="fa-solid fa-location-dot me-2"></i>DBL Arena, Surabaya</li>
+            </ul>
+            <button type="button" class="btn btn-sbl w-100 mt-3">
+              <i class="fa-solid fa-ticket me-2"></i>Buy Ticket
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%- include('partials/footer') %>

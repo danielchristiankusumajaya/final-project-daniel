@@ -1,0 +1,23 @@
+icon calender: <i class="fa-regular fa-calendar"></i>
+user: <i class="fa-regular fa-user"></i>
+home: <i class="fa-regular fa-house"></i>
+ticket: <i class="fa-solid fa-ticket"></i>
+basketball: <i class="fa-solid fa-basketball"></i>
+users: <i class="fa-solid fa-users"></i>
+instagram: <i class="fa-brands fa-instagram"></i>
+whatsapp: <i class="fa-brands fa-whatsapp"></i>
+facebook: <i class="fa-brands fa-facebook"></i>
+tiktok: <i class="fa-brands fa-tiktok"></i>
+gmail: <i class="fa-solid fa-inbox"></i>
+contact: <i class="fa-solid fa-phone"></i>
+location: <i class="fa-solid fa-location-dot"></i>
+share: <i class="fa-solid fa-share-nodes"></i>
+trophy: <i class="fa-solid fa-trophy"></i>
+web: <i class="fa-solid fa-globe"></i>
+chart: <i class="fa-solid fa-chart-simple"></i>
+scorers: <i class="fa-solid fa-star"></i>
+rebounds: <i class="fa-solid fa-circle-up"></i>
+blocks: <i class="fa-solid fa-shield-halved"></i>
+assists: <i class="fa-solid fa-user-ninja"></i>
+checked: <i class="fa-solid fa-circle-check"></i>
+colors: https://colorhunt.co/palette/0107360d1c4222396ffcf1d0

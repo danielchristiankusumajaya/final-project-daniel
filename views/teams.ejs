@@ -1,0 +1,30 @@
+<%- include("partials/header", { title: "Teams" }) %>
+
+<section class="section-pad-sm">
+  <div class="container text-center">
+    <h1 class="heading-underline">SBL Teams</h1>
+    <p class="section-subheading">All teams competing this season</p>
+  </div>
+</section>
+
+<section class="pb-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <% teams.forEach(function(team) { %>
+      
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card-team-list h-100 text-center">
+            <img src="<%= team.logo %>" class="team-logo" alt="Team" />
+            <h5 class="team-name"><%= team.name %></h5>
+            <a href="detail-teams.html" class="btn btn-sbl btn-sm"><%= team._id %></a>
+          </div>
+        </div>
+        
+      <% }) %>
+      
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

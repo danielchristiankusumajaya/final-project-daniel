@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.11.3",
+    "nodemon": "^3.1.14"
+  },
+  "name": "final-daniel",
+  "version": "1.0.0",
+  "description": "icon calender: <i class=\"fa-regular fa-calendar\"></i>\r user: <i class=\"fa-regular fa-user\"></i>\r home: <i class=\"fa-regular fa-house\"></i>\r ticket: <i class=\"fa-solid fa-ticket\"></i>\r basketball: <i class=\"fa-solid fa-basketball\"></i>\r users: <i class=\"fa-solid fa-users\"></i>\r instagram: <i class=\"fa-brands fa-instagram\"></i>\r whatsapp: <i class=\"fa-brands fa-whatsapp\"></i>\r facebook: <i class=\"fa-brands fa-facebook\"></i>\r tiktok: <i class=\"fa-brands fa-tiktok\"></i>\r gmail: <i class=\"fa-solid fa-inbox\"></i>\r contact: <i class=\"fa-solid fa-phone\"></i>\r location: <i class=\"fa-solid fa-location-dot\"></i>\r share: <i class=\"fa-solid fa-share-nodes\"></i>\r trophy: <i class=\"fa-solid fa-trophy\"></i>\r web: <i class=\"fa-solid fa-globe\"></i>\r chart: <i class=\"fa-solid fa-chart-simple\"></i>\r scorers: <i class=\"fa-solid fa-star\"></i>\r rebounds: <i class=\"fa-solid fa-circle-up\"></i>\r blocks: <i class=\"fa-solid fa-shield-halved\"></i>\r assists: <i class=\"fa-solid fa-user-ninja\"></i>\r checked: <i class=\"fa-solid fa-circle-check\"></i>\r colors: https://colorhunt.co/palette/0107360d1c4222396ffcf1d0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
